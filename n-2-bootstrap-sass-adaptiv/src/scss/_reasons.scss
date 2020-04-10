@@ -1,0 +1,50 @@
+.reasons {
+    min-height: 900px;
+    padding-top: 71px;
+    padding-bottom: 65px;
+}
+
+.reasons__list {
+    margin-top: 40px;
+
+    .reasons__side-left,
+    .reasons__side-right {
+
+        .reasons__item {
+
+            .item__icon {
+                display: flex;
+                justify-content: flex-end ;
+                .round {
+                    flex-basis: 113px; 
+                    // width: 113px;
+                    height: 113px;
+                    background-color: $color_blu_main;
+                    border-radius:100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            .item__description {
+
+                &-header {
+                    color: $color_blu_main;
+                    font-size: 17px;
+                    font-weight: 400;
+                }
+
+                &-text {
+                    color: #202020;
+                    font-size: 15px;
+                    font-weight: 300;
+                    line-height: 21px;
+                    text-align: justify;
+                }
+            }
+        }
+
+    }
+
+}
