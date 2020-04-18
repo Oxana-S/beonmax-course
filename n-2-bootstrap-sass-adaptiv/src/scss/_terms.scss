@@ -1,0 +1,61 @@
+.terms {
+    max-width: 1920px;
+    margin: 0 auto;
+    min-height: 919px;
+    padding-top: 76px;
+    padding-bottom: 84px;
+
+    &__block {
+        margin-top: 31px;
+        margin-bottom: 31px;
+    }
+
+    &__header {
+        color: $color_main;
+        font-size: 22px;
+        font-weight: 400;
+
+    }
+
+    &__list {
+        .terms__item {
+            position: relative;
+            list-style: none;
+            color: #222222;
+            font-size: 17px;
+            font-weight: 300;
+            line-height: 20px;
+            margin-bottom: 17px;
+
+        }
+
+        .terms__item::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            background: url(../icons/mark-blue-6.svg) no-repeat;
+            width: 21px;
+            height: 20px;
+            top: 2px;
+            left: -40px;
+        }
+
+    }
+
+    &__description {
+        color: $color_main;
+        opacity: 0.8;
+        font-weight: 300;
+    }
+
+    .warning {
+        .terms__header {
+            color: $color_warning;
+        }
+
+        .terms__item::before {
+            background: url(../icons/mark-red-6.svg) no-repeat;
+        }
+
+    }
+}

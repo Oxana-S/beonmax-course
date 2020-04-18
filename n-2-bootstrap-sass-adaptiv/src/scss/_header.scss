@@ -10,6 +10,10 @@ header {
     background-color: #212121;
 }
 
+.header__menu .container {
+    position: relative;
+}
+
 .menu {
     &__list {
         display: flex;
@@ -18,6 +22,7 @@ header {
     }
 
     &__item {
+        list-style-type: none;
         border-right: 2px dotted #000;
         padding-right: 24px;
         line-height: 24px;
@@ -32,6 +37,55 @@ header {
         color: #ffffff;
         font-size: 15px;
         font-weight: 300;
+
+        &:hover {
+            color: $color_main;
+            text-decoration: none;
+            transition: all 500ms ease;
+        }
+    }
+}
+
+.hamburger {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    cursor: pointer;
+
+    span {
+        display: block;
+        background-color: #fff;
+        height: 2px;
+        width: 100%;
+        margin-bottom: 6px;
+        transition: 0.6s all;
+    }
+
+    span:last-child {
+        margin-bottom: none;
+    }
+
+    &-active {
+
+        span {
+            margin-bottom: -2px;
+            
+            &:nth-child(1) {
+                transform: rotate(-45deg);
+            }
+
+            &:nth-child(2) {
+                display: none;
+            }
+
+            &:nth-child(3) {
+                transform: rotate(45deg);
+            }
+        }
+
     }
 }
 
@@ -76,14 +130,22 @@ header {
     margin-top: 8px;
     padding-right: 0;
     padding-left: 0;
-}
 
+    & a:hover {
+        color: $color_main;
+        text-decoration: none;
+        transition: all 500ms ease;
+    }
+}
+.official__phone-hided {
+    display: none;
+}
 .official__btn {
     width: 172px;
     height: 46px;
     box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.12);
     border: none;
-    background-image: linear-gradient(to top, $color_blu_main 0%, $color_blu_grd 100%);
+    background-image: linear-gradient(to top, $color_main 0%, $color_main_grd 100%);
     border-radius: 3px;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21);
     color: #ffffff;
@@ -91,4 +153,8 @@ header {
     font-weight: 400;
     text-transform: uppercase;
     margin-top: 19px;
+
+    &:hover {
+        @include btn_hover;
+    }
 }

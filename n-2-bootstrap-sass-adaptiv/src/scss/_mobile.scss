@@ -3,7 +3,7 @@
     background: url(../img/bg-3-0.jpg) center center/cover no-repeat;
     padding-top: 80px;
     padding-bottom: 79px;
-    width: 1920px;
+    max-width: 1920px;
     margin: 0 auto;
 
     .row {
@@ -13,8 +13,8 @@
     &__item {
         width: 320px;
         height: 280px;
-        margin-bottom: 19px;
-
+        margin: 0 auto 19px;
+        
         &__img {
             &-1 {
                 background: url(../img/mob-3-1.png) center center no-repeat;
@@ -61,23 +61,48 @@
 
             &-plus {
                 position: absolute;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                top: 219px;
+                left: 50%;
+                transform: translateX(-50%);
+
                 width: 26px;
                 height: 26px;
                 background-color: #000000;
                 border-radius: 100%;
-                top: 219px;
-                left: 50%;
-                transform: translateX(-50%);
+
+                &::before {
+                    content: "";
+                    display: block;
+                    background-color: #fff;
+                    margin: 47% auto;
+                    width: 80%;
+                    height: 5%;
+                }
+
+                &::after {
+                    content: "";
+                    display: block;
+                    background-color: #fff;
+                    margin: -90% auto;
+                    width: 5.5%;
+                    height: 80%;
+
+                }
+            }
+
+            &-plus:hover {
+                background-color: $color_warning;
+                transition: all 500ms ease;
             }
         }
 
         &__overlay:hover {
+
             background-color: rgba(0, 0, 0, .3);
             // color: #000;
-   
+            transition: all 500ms ease;
+
         }
+
     }
 }

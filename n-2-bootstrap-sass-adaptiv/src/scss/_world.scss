@@ -1,0 +1,42 @@
+.world {
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
+  height: 717px;
+  background: url(../img/world-map-7-1.jpg) center center no-repeat;
+  padding-top: 49px;
+  padding-bottom: 49px;
+
+  .section {
+    &__header {
+
+      &-label {
+        background-color: #fff;
+        color: #000;
+      }
+
+      &-title {
+        color: #fff;
+      }
+
+      &-subtitle {
+        color: #fff;
+      }
+    }
+
+  }
+
+  .world__link {
+display: flex;
+justify-content: center;
+    margin-top: 462px;
+    a {
+      color: $color_main;
+      font-size: 15px;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-decoration: none;
+
+    }
+  }
+}
